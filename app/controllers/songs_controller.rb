@@ -17,7 +17,7 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    @song.save ? (redirect_to @song) : (render :edit)
+    @song.save ? (redirect_to @song) : (render :new)
   end
 
   def destroy
