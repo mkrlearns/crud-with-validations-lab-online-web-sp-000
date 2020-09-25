@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :songs
+  root 'songs#index'
   get '/songs', to: 'songs#index'
   get '/songs/new', to: 'songs#new', as: 'new_song'
   post '/songs', to: 'songs#create'
